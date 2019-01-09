@@ -4,13 +4,14 @@ import { Router } from '@angular/router';
 import { Project } from '../models/project';
 
 @Component({
-    selector: 'project-details',
-    templateUrl: 'project-details.component.html'
+    selector: 'project-category',
+    templateUrl: 'project-category.component.html'
 })
 
-export class ProjectDetailsComponent implements OnInit {
+export class ProjectCategoryComponent implements OnInit {
     
-    @Input() project: Project;
+    @Input() title: string;
+    @Input() projects: Project[];
 
     constructor(
         private router: Router) {

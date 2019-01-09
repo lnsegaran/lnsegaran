@@ -13,6 +13,9 @@ export class TopnavComponent implements OnInit {
 
     // Title
     title: string;
+
+    // Scroll
+    prevScrollpos: number;
     
     constructor(
         private router: Router,
@@ -28,5 +31,4 @@ export class TopnavComponent implements OnInit {
 
     ngOnInit(): void {
     }
-
 }

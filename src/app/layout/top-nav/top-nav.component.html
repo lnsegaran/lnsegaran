@@ -4,18 +4,18 @@
   </div>
 </div>
 
-<div class="row">
+<div id="top-menu" class="row">
   <div class="offset-1 col-10 offset-md-2 col-md-2">
-    <button class="btn btn-secondary" type="button" routerLink="/about" style="width:100%;" [ngClass]="{ 'active' : title === 'About' }">
+    <button class="btn btn-top-nav" type="button" routerLink="/about" style="width:100%;" [ngClass]="{ 'active' : title === 'About' }">
       About
     </button>
   </div>
-  <!--<div class="offset-1 col-10 offset-md-0 col-md-2">
+  <div class="offset-1 col-10 offset-md-0 col-md-2">
     <div class="dropdown">
-      <button type="button" class="btn btn-secondary" style="width:calc(100% - 38px);" routerLink="/projects">
+      <button type="button" class="btn btn-top-nav dropdown-toggle-split" style="width:calc(100% - 38px);" routerLink="/projects" [ngClass]="{ 'active' : title === 'Projects' }">
         Projects
       </button>
-      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button type="button" class="btn btn-top-nav dropdown-toggle-split dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  [ngClass]="{ 'active' : title === 'Projects' }">
         <span class="sr-only">Toggle Dropdown</span>
       </button>
       <div class="dropdown-menu" aria-labelledby="projectsMenuDropdown">
@@ -24,27 +24,15 @@
         <button class="dropdown-item" type="button" routerLink="/projects/visual">Visual</button>
       </div>
     </div>
-  </div>-->
-  <div class="offset-1 col-10 offset-md-0 col-md-2">
-    <button class="btn btn-secondary" type="button" routerLink="/projects" style="width:100%;" [ngClass]="{ 'active' : title === 'Projects' }">
-      Projects
-    </button>
   </div>
   <div class="offset-1 col-10 offset-md-0 col-md-2">
-    <button class="btn btn-secondary" type="button" routerLink="/music" style="width:100%;" [ngClass]="{ 'active' : title === 'Music' }">
+    <button class="btn btn-top-nav" type="button" routerLink="/music" style="width:100%;" [ngClass]="{ 'active' : title === 'Music' }">
       Music
     </button>
   </div>
   <div class="offset-1 col-10 offset-md-0 col-md-2">
-    <button class="btn btn-secondary" type="button" routerLink="/contact" style="width:100%;" [ngClass]="{ 'active' : title === 'Contact' }">
+    <button class="btn btn-top-nav" type="button" routerLink="/contact" style="width:100%;" [ngClass]="{ 'active' : title === 'Contact' }">
       Contact
     </button>
   </div>
 </div>
-<!--<br>
-<div class="row">
-  <div class="offset-md-2 col-md-8">
-    <h2>{{title}}</h2>
-  </div>
-</div>-->
-<hr>

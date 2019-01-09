@@ -136,8 +136,14 @@ export class ProjectsComponent implements OnInit {
 
     scrollTo(id: string): void {
         var element = document.getElementById(id);
-        if (!element)
+        
+        if(!element){
+            setTimeout(() => {
+                this.scrollTo(id);
+            }, 100);
             return;
+        }
+
         element.scrollIntoView();
     }
 }

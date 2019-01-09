@@ -24,4 +24,4 @@
 </div>
 <hr>
 <br/>
-<project-categories *ngFor="let projectType of projectTypes" id="{{projectType.toLowerCase()}}" [title]="projectType" [projects]="projects | filter:'Type':projectType"></project-categories>
+<project-category *ngFor="let projectType of projectTypes" id="{{projectType.toLowerCase()}}" [title]="projectType" [projects]="projects | filter:'Type':projectType"></project-category>
