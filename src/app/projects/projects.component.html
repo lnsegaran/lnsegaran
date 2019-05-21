@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-3">
+        <ul class="contents-list">
+            <li *ngFor="let projectType of projectTypes" (click)="scrollTo(projectType.toLowerCase());">{{projectType}}
+                <ul class="contents-list">
+                    <li *ngFor="let project of projects | filter:'Type':projectType" (click)="scrollTo(project.Title);">{{project.Title}}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="col-9">
+        <p>
+            Over the past couple of years I've been doing a lot with modular synthesisers. I decided to try my hand at designing and making my own Eurorack synthesiser.
+        </p>
+        <p>
+            I started with the idea that I would make a modualr drum machine and work progressively into bass and lead synths. 
+            The first few modules I made were all to do with clocks and gates, then I began to make some drum synth modules which would provide the individual drum sounds for the machine. 
+            I currently have a bass drum, two toms and two high hats.
+        </p>
+        <p>
+            The main drum modules are mostly analogue with a few digital components however most of the clock and gate signals are generated digitally using programmed arduinos.
+        </p>
+    </div>
+</div>
+<hr>
+<br/>
+<project-categories *ngFor="let projectType of projectTypes" id="{{projectType.toLowerCase()}}" [title]="projectType" [projects]="projects | filter:'Type':projectType"></project-categories>

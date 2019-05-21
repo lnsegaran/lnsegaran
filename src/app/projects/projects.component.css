@@ -1,0 +1,7 @@
+.contents-list {
+    list-style-type: none;
+}
+
+.contents-list li {
+    cursor: pointer;
+}
