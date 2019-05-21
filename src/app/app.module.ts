@@ -12,8 +12,8 @@ import { TopnavComponent } from './layout/top-nav/top-nav.component';
 // Pages
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { ProjectCategoriesComponent } from './projects/project-categories/project-categories.component';
-import { ProjectDetailsComponent } from './projects/project-details/project-details.component';
+import { ProjectCategoryComponent } from './projects/project-category/project-category.component';
+import { ProjectDetailComponent } from './projects/project-detail/project-detail.component';
 import { MusicComponent } from './music/music.component';
 import { ContactComponent } from './contact/contact.component';
 
@@ -33,8 +33,8 @@ import { OrderByPipe } from './pipes/order-by.pipe';
     // Pages
     AboutComponent,
     ProjectsComponent,
-    ProjectCategoriesComponent,
-    ProjectDetailsComponent,
+    ProjectCategoryComponent,
+    ProjectDetailComponent,
     MusicComponent,
     ContactComponent,
     // Pipes

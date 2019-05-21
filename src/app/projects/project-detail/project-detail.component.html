@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-9">
+        <h3>{{project.Title}}</h3>
+    </div>
+    <div class="col-3">
+        <span class="pull-right">{{project.Date | date}}</span>
+    </div>
+</div>
+<div class="row" *ngIf="project.Description">
+    <div class="col-9">
+        <span [innerHtml]="project.Description"></span>
+    </div>
+    <div class="col-3">
+        <span>{{project.Image}}</span>
+    </div>
+</div>
+<div class="row" *ngIf="project.Tags">
+    <div class="col-12">
+        Tags: <span *ngFor="let tag of project.Tags; let last = last;">{{tag}}<span *ngIf="!last">, </span></span>
+    </div>
+</div>
+<div class="row" *ngIf="project.Steps">
+    <div class="col-12" *ngFor="let step of project.Steps | orderBy:'Sequence':true;">
+        <div class="row">
+            <div class="col-3"><h4>{{step?.Title}}</h4></div>
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-6" [ngClass]="{ 'col-12' : !step?.Images }" *ngIf="step?.Description" [innerHtml]="step?.Description"></div>
+                    <div class="col-6" [ngClass]="{ 'col-12' : !step?.Description }" *ngIf="step?.Images">
+                        <div class="row" *ngFor="let image of step?.Images; let even = even;">
+                            <div class="col-12" *ngIf="step?.Description">
+                                <div class="row">
+                                    <div class="col-12"><img [src]="image?.Image" width="100%"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">{{image?.Description}}</div>
+                                </div>
+                            </div>
+                            <div class="col-6" *ngIf="!step?.Description">
+                                <span *ngIf="even">{{image.Description}}</span>
+                                <img *ngIf="!even" [src]="image?.Image" width="100%">
+                            </div>
+                            <div class="col-6" *ngIf="!step?.Description">
+                                <span *ngIf="!even">{{image.Description}}</span>
+                                <img *ngIf="even" [src]="image?.Image" width="100%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
